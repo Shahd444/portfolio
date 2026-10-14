@@ -122,6 +122,5 @@ ul { padding: 0; list-style: none; }
 .dm-card-img:has(img) { padding: 0; }
 .dm-card-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: right top; }
 .dm-card-img img.img-top { object-position: center top; }
-.dm-card:hover .dm-card-img:has(img) { transform: none; }
 .dm-card-img--voting { background: #f8f5ef; }
 .dm-card-img img.img-fit { object-fit: contain; object-position: center; }
