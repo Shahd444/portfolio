@@ -124,3 +124,5 @@ ul { padding: 0; list-style: none; }
 .dm-card-img img.img-top { object-position: center top; }
 .dm-card-img--voting { background: #f8f5ef; }
 .dm-card-img img.img-fit { object-fit: contain; object-position: center; }
+.card-sum--role { margin-top: var(--space-3); }
+.card-sum strong { color: var(--white); font-weight: 500; }
