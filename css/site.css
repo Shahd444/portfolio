@@ -131,16 +131,3 @@ ul { padding: 0; list-style: none; }
 .cert a:hover { color: var(--white-hover); text-decoration: underline; text-underline-offset: 4px; }
 .cert span { font-size: 14px; line-height: 20px; color: var(--white-icon); }
 @media (min-width: 640px) { .skill-group--wide { grid-column: 1 / -1; } }
-
-/* About: intro on top, skills as glass panels in a grid */
-.about-grid, .about-grid { grid-template-columns: 1fr; gap: var(--space-8); }
-.about-copy { max-width: 720px; }
-.about-copy p { font-size: 18px; line-height: 28px; }
-.skill-groups { gap: var(--space-4); grid-template-columns: 1fr; }
-.skill-group { padding: var(--space-6); border: 1px solid var(--white-icon-tr); border-radius: var(--radius-2xl); background: var(--surface-glass);
-  transition: background-color 300ms ease-in-out; }
-.skill-group:hover { background: var(--white-icon-tr); }
-.skill-group h4 { margin-bottom: var(--space-4); }
-.chip { background: var(--background); }
-@media (min-width: 640px) { .skill-groups { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: var(--space-12); } }
