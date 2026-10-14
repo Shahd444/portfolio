@@ -126,3 +126,8 @@ ul { padding: 0; list-style: none; }
 .dm-card-img img.img-fit { object-fit: contain; object-position: center; }
 .card-sum--role { margin-top: var(--space-3); }
 .card-sum strong { color: var(--white); font-weight: 500; }
+.cert { display: flex; flex-direction: column; gap: var(--space-1); }
+.cert a { font-weight: 500; text-decoration: none; }
+.cert a:hover { color: var(--white-hover); text-decoration: underline; text-underline-offset: 4px; }
+.cert span { font-size: 14px; line-height: 20px; color: var(--white-icon); }
+@media (min-width: 640px) { .skill-group--wide { grid-column: 1 / -1; } }
