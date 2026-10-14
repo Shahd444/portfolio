@@ -1,0 +1,102 @@
+/* Dark Minimal component styles. Every value is a token variable from tokens.css. */
+
+.dm-icon-btn {
+  display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box;
+  padding: var(--space-3); border: 1px solid var(--white-icon-tr); border-radius: var(--radius-xl);
+  background: var(--surface-glass); color: var(--white-icon); cursor: pointer; text-decoration: none;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+}
+.dm-icon-btn svg { width: var(--space-8); height: var(--space-8); display: block; }
+.dm-icon-btn:hover { color: var(--white-hover); background: var(--white-icon-tr); }
+.dm-icon-btn--card { width: var(--space-14); height: var(--space-14); }
+.dm-icon-btn--card svg { width: 28px; height: 28px; }
+
+.dm-pill-btn {
+  display: flex; align-items: center; justify-content: center; gap: var(--space-2); width: 100%; box-sizing: border-box;
+  padding: var(--space-3); border: 1px solid var(--white-icon-tr); border-radius: var(--radius-full);
+  background: var(--surface-glass); color: var(--white-icon); font: inherit; font-size: 18px; line-height: 28px;
+  text-decoration: none; cursor: pointer;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out, transform 300ms ease-in-out;
+}
+.dm-pill-btn svg { width: 24px; height: 24px; display: block; }
+.dm-pill-btn:hover { color: var(--white-hover); background: var(--white-icon-tr); transform: scale(1.05); }
+
+.dm-submit {
+  padding: var(--space-2) var(--space-4); border: 1px solid var(--white-icon-tr); border-radius: var(--radius-lg);
+  background: var(--white-icon-tr); color: var(--white); font: inherit; opacity: .6; cursor: pointer;
+  transition: opacity 300ms ease-in-out;
+}
+.dm-submit:hover { opacity: 1; }
+
+.dm-field {
+  box-sizing: border-box; width: 100%; padding: var(--space-2) var(--space-4); border: 1px solid var(--white-icon-tr);
+  border-radius: var(--radius-lg); background: var(--surface-glass); color: var(--white); font: inherit; resize: none;
+}
+.dm-field::placeholder { color: var(--white-icon); }
+.dm-field:focus { outline: none; box-shadow: 0 0 0 2px var(--sec); }
+
+.dm-icon-btn:focus-visible, .dm-pill-btn:focus-visible, .dm-submit:focus-visible, .dm-nav a:focus-visible, .dm-card:focus-visible {
+  outline: 2px solid var(--sec); outline-offset: 2px;
+}
+
+.dm-eyebrow { margin: 0 0 var(--space-2); font-size: 18px; line-height: 28px; color: var(--sec); }
+.dm-shiny {
+  background: linear-gradient(135deg, var(--sec) 25%, var(--sec-shine) 50%, var(--sec) 75%);
+  background-size: 400% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: dm-shine 3s linear infinite;
+}
+@keyframes dm-shine { 0% { background-position: 100% 50%; } 30%, 70% { background-position: 0% 50%; } }
+
+.dm-title { margin: 0; font-size: 48px; line-height: 48px; font-weight: 500; color: var(--white); }
+.dm-section { padding: var(--space-12) 0; border-top: 1px solid var(--hairline); }
+
+.dm-nav {
+  display: inline-block; box-sizing: border-box; padding: var(--space-3); border: 1px solid transparent;
+  background: var(--background);
+  transition: background-color 300ms ease, border-radius 300ms ease, border-color 300ms ease;
+}
+.dm-nav--scrolled { background: var(--surface-glass); border-color: var(--hairline); border-radius: var(--radius-full); backdrop-filter: blur(24px); }
+.dm-nav ul { display: flex; gap: var(--space-12); margin: 0; padding: 0 var(--space-6); list-style: none; }
+.dm-nav a { position: relative; display: block; color: var(--white-icon); font-size: 16px; line-height: 24px; text-decoration: none; }
+.dm-nav a:hover { color: var(--white-hover); }
+.dm-nav a[aria-current] { color: var(--white-hover); }
+.dm-nav a[aria-current]::before {
+  content: ""; position: absolute; left: -24px; top: 50%; width: 8px; height: 8px;
+  border-radius: var(--radius-full); background: var(--nav-dot); transform: translateY(-50%);
+}
+.dm-tabbar {
+  display: flex; box-sizing: border-box; width: 100%; padding: var(--space-3); gap: var(--space-6);
+  border: 1px solid var(--hairline); border-radius: var(--radius-2xl) var(--radius-2xl) 0 0; background: var(--surface-glass);
+}
+.dm-tabbar a { flex: 1; display: flex; flex-direction: column; align-items: center; gap: var(--space-1); color: var(--white-icon); font-size: 12px; line-height: 16px; text-decoration: none; }
+.dm-tabbar a[aria-current] { color: var(--white-hover); }
+.dm-tabbar svg { width: 24px; height: 24px; display: block; }
+
+.dm-card { display: block; color: var(--white); text-decoration: none; }
+.dm-card-media { margin-bottom: var(--space-4); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg); transition: box-shadow 300ms ease-in-out; }
+.dm-card:hover .dm-card-media { box-shadow: var(--shadow-xl); }
+.dm-card-img {
+  display: flex; align-items: center; justify-content: center; width: 100%; height: 288px; background: var(--placeholder);
+  color: var(--white); font-size: 24px; transition: transform 300ms ease-in-out;
+}
+.dm-card:hover .dm-card-img { transform: scale(1.05); }
+.dm-card-body { display: flex; align-items: center; padding: 0 var(--space-3); }
+.dm-card-text { flex: 1; min-width: 0; }
+.dm-card-title { margin: 0; font-size: 24px; line-height: 32px; font-weight: 600; }
+.dm-card-status { display: block; padding: var(--space-1) 0; font-size: 14px; line-height: 20px; color: var(--white-icon); }
+.dm-card-actions { display: flex; gap: var(--space-2); margin-left: auto; }
+
+.dm-marquee { position: relative; overflow: hidden; padding: var(--space-8) 0; }
+.dm-marquee::before, .dm-marquee::after { content: ""; position: absolute; top: 0; bottom: 0; width: 128px; z-index: 1; pointer-events: none; }
+.dm-marquee::before { left: 0; background: linear-gradient(90deg, var(--background), transparent); }
+.dm-marquee::after { right: 0; background: linear-gradient(270deg, var(--background), transparent); }
+.dm-marquee-track { display: flex; width: max-content; animation: dm-scroll 50s linear infinite; }
+.dm-marquee-item { display: flex; align-items: center; gap: var(--space-2); padding-right: var(--space-20); font-size: 18px; line-height: 28px; font-weight: 500; color: var(--white-icon); white-space: nowrap; }
+.dm-marquee-mark { width: 28px; height: 28px; border-radius: var(--radius-lg); background: var(--white-icon-tr); opacity: .6; }
+@keyframes dm-scroll { to { transform: translate3d(-50%, 0, 0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .dm-shiny, .dm-marquee-track { animation: none; }
+  .dm-shiny { color: var(--sec); background: none; }
+  .dm-card-img, .dm-pill-btn { transition: none; }
+}

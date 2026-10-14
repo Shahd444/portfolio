@@ -1,0 +1,32 @@
+/* Dark Minimal tokens, from the design system's tokens.json */
+@font-face {
+  font-family: "Montserrat Variable";
+  src: url("../assets/fonts/montserrat-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
+:root {
+  --background: #101010;
+  --white: #dfdfdf;
+  --white-icon: #f3f3f398;
+  --white-hover: #ffffff;
+  --white-icon-tr: #f3f3f310;
+  --surface-glass: #1414149c;
+  --hairline: #ffffff10;
+  --placeholder: #1a1a1a;
+  --sec: #a476ff;
+  --sec-shine: #eee5ff;
+  --sec-deep: #5e4491;
+  --sec-ink: #241a38;
+  --nav-dot: #a9ff5b;
+
+  --font-sans: "Montserrat Variable", -apple-system, system-ui, sans-serif;
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-6: 24px; --space-8: 32px;
+  --space-9: 36px; --space-12: 48px; --space-14: 56px; --space-20: 80px; --space-28: 112px; --space-36: 144px;
+  --container-max: 1024px;
+
+  --radius-lg: 8px; --radius-xl: 12px; --radius-2xl: 16px; --radius-full: 9999px;
+
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+}
