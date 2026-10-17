@@ -41,4 +41,22 @@
 
   var year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
+
+  // Theme toggle: dark by default, choice remembered
+  var btn = document.getElementById('theme-toggle');
+  var meta = document.querySelector('meta[name="theme-color"]');
+  function applyTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    if (btn) {
+      btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      btn.setAttribute('aria-pressed', t === 'light' ? 'true' : 'false');
+    }
+    if (meta) meta.setAttribute('content', t === 'dark' ? '#101010' : '#f6f5f2');
+  }
+  applyTheme(document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  if (btn) btn.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
 })();

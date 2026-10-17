@@ -30,3 +30,23 @@
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
 }
+
+/* Light theme: same roles, values chosen for 4.5:1 text contrast on the light page */
+:root[data-theme="light"] {
+  --background: #f6f5f2;
+  --white: #1a1a1a;
+  --white-icon: #141414b3;
+  --white-hover: #000000;
+  --white-icon-tr: #14141410;
+  --surface-glass: #ffffffb3;
+  --hairline: #00000014;
+  --placeholder: #ebe9e4;
+  --sec: #6d3fd1;
+  --sec-shine: #3d1b94;
+  --sec-deep: #a476ff;
+  --sec-ink: #e7dcff;
+  --nav-dot: #2f9e1f;
+  color-scheme: light;
+}
+:root, :root[data-theme="dark"] { color-scheme: dark; }
+:root[data-theme="light"] { color-scheme: light; }
