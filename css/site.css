@@ -180,3 +180,5 @@ body { transition: background-color 300ms ease-in-out, color 300ms ease-in-out; 
   .timeline li { flex-direction: row; gap: var(--space-8); }
   .tl-date { width: 140px; padding-top: 2px; }
 }
+
+.edu-download { margin-top: var(--space-8); max-width: 520px; }
