@@ -22,7 +22,7 @@
 
   // Mark the link of the section in view
   var links = document.querySelectorAll('a[data-nav]');
-  var sections = ['home', 'about', 'projects', 'contact']
+  var sections = ['home', 'about', 'projects', 'education', 'contact']
     .map(function (id) { return document.getElementById(id); })
     .filter(Boolean);
   function setCurrent(id) {
@@ -33,7 +33,7 @@
   }
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) setCurrent(e.target.id); });
+      entries.forEach(function (e) { if (e.isIntersecting) setCurrent(e.target.id === 'education' ? 'about' : e.target.id); });
     }, { rootMargin: '-40% 0px -55% 0px' });
     sections.forEach(function (s) { io.observe(s); });
   }

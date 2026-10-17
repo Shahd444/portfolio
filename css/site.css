@@ -156,3 +156,27 @@ body { transition: background-color 300ms ease-in-out, color 300ms ease-in-out; 
 .cert-arrow { flex: none; width: 24px; height: 24px; color: var(--white-icon); transition: color 300ms ease-in-out; }
 .cert-card:hover .cert-arrow { color: var(--white-hover); }
 @media (prefers-reduced-motion: reduce) { .cert-card:hover { transform: none; } }
+
+/* Education */
+.edu-card { padding: var(--space-6); border: 1px solid var(--white-icon-tr); border-radius: var(--radius-2xl); background: var(--surface-glass); }
+.edu-head { display: flex; flex-direction: column; gap: var(--space-2); }
+.edu-title { font-size: 24px; line-height: 32px; font-weight: 600; }
+.edu-sub, .edu-dates { font-size: 14px; line-height: 20px; color: var(--white-icon); }
+.edu-stats { display: grid; grid-template-columns: 1fr; gap: var(--space-4); margin: var(--space-6) 0; }
+.edu-stats dt { font-size: 14px; line-height: 20px; color: var(--white-icon); }
+.edu-stats dd { margin: var(--space-1) 0 0; font-size: 18px; line-height: 28px; font-weight: 500; color: var(--white); }
+.chip { background: var(--background); }
+.tl-heading { margin: var(--space-12) 0 var(--space-4); font-size: 24px; line-height: 32px; font-weight: 600; }
+.timeline li { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4) 0; border-bottom: 1px solid var(--hairline); }
+.tl-date { flex: none; font-size: 14px; line-height: 20px; color: var(--white-icon); }
+.tl-body { display: flex; flex-direction: column; gap: var(--space-1); min-width: 0; }
+.tl-name { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); font-weight: 600; color: var(--white); }
+.tl-badge { padding: 0 var(--space-2); border: 1px solid var(--sec); border-radius: var(--radius-full); font-size: 12px; line-height: 20px; font-weight: 500; color: var(--sec); }
+.tl-text { font-size: 14px; line-height: 20px; color: var(--white-icon); }
+.tl-note { margin-top: var(--space-4); font-size: 14px; line-height: 20px; color: var(--white-icon); }
+@media (min-width: 768px) {
+  .edu-head { flex-direction: row; justify-content: space-between; align-items: flex-start; }
+  .edu-stats { grid-template-columns: repeat(3, 1fr); }
+  .timeline li { flex-direction: row; gap: var(--space-8); }
+  .tl-date { width: 140px; padding-top: 2px; }
+}
