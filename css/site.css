@@ -131,3 +131,5 @@ ul { padding: 0; list-style: none; }
 .cert a:hover { color: var(--white-hover); text-decoration: underline; text-underline-offset: 4px; }
 .cert span { font-size: 14px; line-height: 20px; color: var(--white-icon); }
 @media (min-width: 640px) { .skill-group--wide { grid-column: 1 / -1; } }
+.cert-block { margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--hairline); }
+.cert-block h4 { margin-bottom: var(--space-3); font-size: 18px; line-height: 28px; font-weight: 500; color: var(--white); }
