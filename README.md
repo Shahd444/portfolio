@@ -15,7 +15,7 @@ npx http-server . -p 4173
 ## Deploy
 
 Hosted with GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / root**.
-The site is then available at `https://shahd444.github.io/portfolio/`.
+The repository is named `shahd444.github.io`, so the site is served at `https://shahd444.github.io/`.
 
 ## Structure
 
